@@ -1,6 +1,6 @@
 # app.py (dengan perbaikan konversi gambar)
 import streamlit as st
-#import cv2
+import cv2
 import os
 import base64
 import numpy as np
