@@ -1,8 +1,9 @@
 numpy==2.2.6
 pandas==2.3.1
 pip==25.2
-torch==2.7.1+cu126
+torch
 streamlit
 ultralytics
 easyocr
 opencv-python
+
