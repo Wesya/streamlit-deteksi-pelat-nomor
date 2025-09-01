@@ -1,10 +1,10 @@
 numpy==2.2.6
 pandas==2.3.1
-pip==25.2
-torch
-streamlit
+streamlit==1.46.1
+torch==2.7.1
 ultralytics
 easyocr
 opencv-python-headless
+
 
 
