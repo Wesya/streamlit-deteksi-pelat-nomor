@@ -14,6 +14,11 @@ st.set_page_config(page_title="Deteksi dan Validasi Status Pajak Kendaraan", lay
 st.title('Deteksi Plat Nomor & Validasi Pajak')
 st.markdown("---")
 
+@st.cache_resource
+def load_model():
+    model = YOLO("best.pt")
+    return model
+
 # Fungsi untuk mengonversi gambar numpy array ke base64
 def image_to_base64(image_array):
     # Konversi array gambar ke format yang bisa diencode
@@ -54,7 +59,7 @@ if uploaded_file is not None:
     
     with st.spinner("Memproses gambar..."):
         # Memanggil model YOLO dan EasyOCR
-        model = YOLO("best.pt")
+        model = load_model()
         reader = Reader(['en'], gpu=True)
         
         # Baca gambar
